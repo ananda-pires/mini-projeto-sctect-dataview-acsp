@@ -1,11 +1,15 @@
 {
+  "total_vendas": 134.0,
+  "receita_total": 928450.0,
   "media": 6928.731343283582,
   "mediana": 5100.0,
   "desvio_padrao": 6449.662425696054,
-  "min": 120.0,
-  "max": 24500.0,
-  "soma_total": 928450.0,
-  "p25": 1200.0,
-  "p75": 10800.0,
-  "acima_da_media": 60.0
+  "minimo": 120.0,
+  "maximo": 24500.0,
+  "percentil_25": 1200.0,
+  "percentil_75": 10800.0,
+  "participacao_top5_vendas": 12.278528730680165,
+  "vendas_acima_media": 60.0,
+  "vendas_abaixo_media": 74.0,
+  "coeficiente_variacao": 0.9308576283518458
 }
