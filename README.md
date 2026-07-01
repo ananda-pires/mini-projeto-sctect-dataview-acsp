@@ -1,77 +1,45 @@
-# MiniProjeto DataView
+# DataView: Análise Preditiva e Exploratória de Vendas
 
-## Sobre o Projeto
+## Visão Geral do Projeto
 
-O DataView é um projeto de Análise Exploratória de Dados (EDA) desenvolvido em Python utilizando Jupyter Notebook.
+O **DataView** é um pipeline completo de análise de dados desenvolvido em Python com foco em práticas de **Data Science e Análise Preditiva aplicada a negócios**.
 
-O sistema gera um dataset sintético de vendas, realiza a limpeza dos dados, tratamento de outliers, criação de variáveis derivadas, cálculo de métricas, segmentação de clientes, geração de visualizações e exportação dos resultados.
+O projeto simula um cenário real de uma empresa de varejo que precisa entender seu desempenho de vendas para apoiar decisões estratégicas da diretoria.
 
-O objetivo é demonstrar a aplicação prática dos principais conceitos estudados no módulo de Python para Ciência de Dados.
-
----
-
-## Objetivo
-
-Praticar e demonstrar conhecimentos em:
-
-- Lógica de programação
-- Estruturas condicionais
-- Estruturas de repetição
-- Funções com parâmetros e retorno
-- Funções lambda
-- Funções reutilizáveis
-- Expressões regulares (Regex)
-- Manipulação de datas com datetime
-- Manipulação de arquivos CSV e JSON
-- Pandas para análise de dados
-- NumPy para cálculos vetorizados
-- Detecção e tratamento de outliers
-- Visualização de dados com Matplotlib e Seaborn
-- Organização de projetos de análise de dados
-- Versionamento com Git e GitHub
+Ao longo do pipeline, os dados passam por etapas de:
+- geração sintética com inconsistências
+- limpeza e tratamento
+- transformação e engenharia de atributos
+- análise exploratória e estatística
+- segmentação de clientes
+- visualização de dados
+- exportação de relatórios
 
 ---
 
-## Dataset
+## Objetivos de Negócio
 
-O dataset foi gerado sinteticamente através de código Python para fins educacionais.
+O time de negócio deseja responder às seguintes perguntas:
 
-Cada registro representa uma venda contendo as seguintes informações:
-
-| Coluna | Descrição |
-|----------|----------|
-| id_venda | Identificador da venda |
-| data_venda | Data da venda |
-| cliente | Cliente responsável pela compra |
-| produto | Produto vendido |
-| categoria | Categoria do produto |
-| regiao | Região da venda |
-| quantidade | Quantidade vendida |
-| preco_unitario | Preço unitário |
-
-O dataset foi criado propositalmente contendo problemas comuns encontrados em dados reais:
-
-- Valores nulos
-- Datas inválidas
-- Espaços extras em textos
-- Outliers
+- Como as vendas evoluem ao longo do tempo (mensal e trimestral)?
+- Quais produtos e categorias geram maior receita?
+- Quais regiões apresentam melhor desempenho?
+- Quem são os clientes mais valiosos?
+- Existe concentração de receita em poucos clientes (efeito Pareto)?
 
 ---
 
 ## Estrutura do Projeto
 
-```text
 projeto/
 │
 ├── data/
 │   ├── raw/
 │   ├── processed/
-│   │   ├── v1_com_outliers/
-│   │   └── v2_outliers_tratado/
 │   └── final/
 │
 ├── notebooks/
-│   └── dataview.ipynb
+│   └── 01_analise_exploratoria_vendas.ipynb
 │
 ├── outputs/
 │   ├── graficos/
@@ -81,36 +49,71 @@ projeto/
 │
 ├── README.md
 └── requirements.txt
-```
 
-## Dataset Final Escolhido
+---
 
-Foi utilizada a versão:
+## Tecnologias Utilizadas
 
-**v2_outliers_tratado**
-
-para a geração do dataset final e das análises.
-
-## Ferramentas Utilizadas
-
-- Python 3.12
-- VS Code
-- Jupyter Notebook
+- Python
 - Pandas
 - NumPy
 - Matplotlib
 - Seaborn
-- datetime
-- re
-- json
-- os
-- Git
-- GitHub
+- Regex
 
-## Repositório GitHub
+---
 
-Inserir link do repositório público.
+## Pipeline de Dados
 
-## Vídeo de Demonstração
+1. Geração do Dataset (RF01)
+2. Inspeção de Dados (RF02)
+3. Limpeza e Tratamento (RF03)
+4. Outliers (RF04)
+5. Engenharia de Atributos (RF05)
+6. Métricas de Negócio (RF06)
+7. Segmentação de Clientes (RF07)
+8. Estatísticas Numéricas (RF08)
+9. Visualização de Dados (RF09)
+10. Organização em Funções (RF10)
+11. Exportação de Dados (RF11)
 
-Inserir link do vídeo (YouTube ou Google Drive).
+---
+
+## Principais Insights
+
+- Variação significativa de receita ao longo do ano
+- Produtos líderes: Tablets e Smartphones
+- Categoria dominante: Celulares
+- Região Norte com maior receita total
+- Forte concentração de receita em poucos clientes
+
+---
+
+## Segmentação de Clientes
+
+- Ouro: clientes de alto valor
+- Prata: clientes intermediários
+- Bronze: clientes ocasionais
+
+---
+
+## Como Executar
+
+pip install pandas numpy matplotlib seaborn
+
+Execute o notebook:
+01_analise_exploratoria_vendas.ipynb
+
+---
+
+## Conclusão
+
+Pipeline completo de análise de dados com foco em varejo, cobrindo desde dados brutos até insights estratégicos.
+
+---
+
+## Melhorias futuras
+
+- Modelos preditivos
+- Clustering de clientes
+- Dashboard interativo
