@@ -193,20 +193,20 @@ Produtos como Tablets e Smartphones concentram grande parte da receita total.
 
 ## 🧩 Categorias de maior impacto
 
-A categoria Celulares domina o faturamento total do período analisado.
+A categoria **Celulares** domina o faturamento total do período analisado.
 
 <p align="center">
-  <img src="outputs/graficos/receita_por_categoria.png" width="750"/>
+  <img src="outputs/graficos/receita_categoria.png" width="750"/>
 </p>
 
 ---
 
 ## 🌎 Desempenho regional
 
-A região Norte apresenta o maior volume de receita, enquanto outras regiões mostram distribuição mais equilibrada.
+A região **Norte** apresenta o maior volume de receita, enquanto outras regiões mostram distribuição mais equilibrada.
 
 <p align="center">
-  <img src="outputs/graficos/receita_por_regiao.png" width="750"/>
+  <img src="outputs/graficos/receita_regiao.png" width="750"/>
 </p>
 
 ---
