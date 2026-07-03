@@ -1,127 +1,133 @@
-# DataView: Análise Exploratória e Preditiva de Vendas
+# 📊 DataView: Análise Exploratória e Preditiva de Vendas
 
 ## Sobre o Projeto
 
-O **DataView** é um projeto de análise exploratória de dados (EDA) desenvolvido em **Python**, utilizando um pipeline completo de processamento de dados baseado no processo **ETL (Extract, Transform and Load)**.
+O **DataView** é um projeto de análise exploratória de dados (EDA) desenvolvido em Python, baseado em um pipeline completo de processamento de dados no formato ETL (Extract, Transform, Load).
 
-O projeto simula um cenário real de uma empresa de varejo que necessita transformar dados brutos de vendas em informações estratégicas para apoiar a tomada de decisão.
-
-Durante o desenvolvimento são aplicadas técnicas de geração de dados, limpeza, transformação, análise estatística, visualização e exportação de resultados, seguindo boas práticas de organização e reutilização de código.
+O objetivo é simular um cenário real de varejo, onde dados são transformados em insights estratégicos para suporte à decisão.
 
 ---
 
-# Objetivos do Projeto
+# 🎯 Objetivos do Projeto
 
-Responder perguntas importantes para o negócio, como:
-
-- Como as vendas evoluem ao longo dos meses e trimestres?
-- Quais produtos e categorias geram maior receita?
-- Quais regiões apresentam melhor desempenho?
-- Quem são os clientes mais valiosos?
-- Existe concentração de receita em poucos clientes (Princípio de Pareto)?
-- Como o tratamento de outliers influencia as análises?
+- Entender a evolução das vendas ao longo do tempo  
+- Identificar produtos e categorias mais rentáveis  
+- Avaliar desempenho regional  
+- Analisar clientes mais valiosos  
+- Investigar concentração de receita (Princípio de Pareto)  
+- Avaliar impacto de outliers nas análises  
 
 ---
 
-# O que o projeto analisa
+# 📦 O que o projeto analisa
 
-✔ Receita total por mês
-
-✔ Receita por trimestre
-
-✔ Produtos mais vendidos
-
-✔ Categorias mais rentáveis
-
-✔ Receita por região
-
-✔ Ticket médio
-
-✔ Segmentação de clientes (Bronze, Prata e Ouro)
-
-✔ Estatísticas descritivas
-
-✔ Comparação entre dados com e sem tratamento de outliers
-
-✔ Exportação automática de relatórios
+✔ Receita por período  
+✔ Produtos e categorias  
+✔ Desempenho regional  
+✔ Ticket médio  
+✔ Segmentação de clientes  
+✔ Estatísticas descritivas  
+✔ Comparação entre dados com e sem outliers  
+✔ Exportação de métricas e relatórios  
 
 ---
 
-# Conceitos Aplicados
+# 🧠 Conceitos Aplicados
 
-Durante o desenvolvimento foram utilizados diversos conceitos de programação e análise de dados, incluindo:
-
-- Variáveis e tipos de dados
-- Operadores aritméticos e lógicos
-- Estruturas condicionais (`if`, `elif`, `else`)
-- Estruturas de repetição (`for` e `while`)
-- Funções reutilizáveis
-- Funções Lambda
-- Manipulação de arquivos CSV e JSON
-- Manipulação de datas com `datetime`
-- Expressões regulares (`re`)
-- Organização modular do código
-- Tratamento de exceções
-- Programação orientada à reutilização
+- Manipulação de dados com Pandas  
+- Operações numéricas com NumPy  
+- Funções reutilizáveis  
+- Função de ordem superior (pipeline com callbacks)  
+- Estruturas condicionais e repetição  
+- Engenharia de atributos  
+- Tratamento de outliers (IQR)  
+- Estatística descritiva  
+- Visualização de dados  
 
 ---
 
-# Bibliotecas Utilizadas
+# 📌 Dependências
 
-- Python 3.10+
-- Pandas
-- NumPy
-- Matplotlib
-- Seaborn
-- datetime
-- re
-- os
-- random
-
----
-
-# Pipeline do Projeto
-
-O projeto foi desenvolvido em etapas organizadas:
-
-### RF01
-Geração do dataset sintético de vendas.
-
-### RF02
-Inspeção inicial dos dados.
-
-### RF03
-Limpeza e tratamento dos dados.
-
-### RF04
-Identificação e tratamento de outliers utilizando IQR.
-
-### RF05
-Engenharia de atributos.
-
-### RF06
-Cálculo de indicadores de negócio.
-
-### RF07
-Segmentação de clientes.
-
-### RF08
-Análise estatística descritiva.
-
-### RF09
-Visualizações com Matplotlib e Seaborn.
-
-### RF10
-Refatoração e organização em funções reutilizáveis.
-
-### RF11
-Exportação de arquivos CSV, JSON e gráficos.
-
----
-
-# Estrutura do Projeto
+Todas as dependências do projeto estão no arquivo:
 
 ```
+requirements.txt
+```
+
+Instalação:
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+# 🚀 Como Executar
+
+## 🟡 Google Colab
+
+1. Faça upload do notebook `notebooks/01_analise_exploratoria_vendas.ipynb`  
+2. Execute as células em ordem  
+
+Se necessário:
+
+```python
+!pip install -r requirements.txt
+```
+
+---
+
+## 🟢 Localmente (VS Code)
+
+### 1. Clone o repositório
+
+```bash
+git clone <repo>
+cd DataView
+```
+
+### 2. Instale as dependências
+
+```bash
+pip install -r requirements.txt
+```
+
+### 3. Execute o notebook
+
+```
+notebooks/01_analise_exploratoria_vendas.ipynb
+```
+
+---
+
+# 🧪 Pipeline do Projeto
+
+### RF01 — RF09
+Etapas de geração, limpeza, transformação, análise e visualização dos dados.
+
+### RF10 — Orquestração do Pipeline
+Implementação de uma função de ordem superior (`executar_etapa`) que organiza e padroniza a execução de todas as etapas do pipeline.
+
+### RF11 — Exportação de Dados
+Geração automática de arquivos CSV, JSON e gráficos.
+
+---
+
+# 📈 Resultados do Pipeline
+
+Após a execução completa do pipeline:
+
+- 📄 Dataset bruto: **150 registros**
+- 🧹 Dataset após limpeza (v1): **140 registros**
+- 📉 Outliers removidos: **6 registros**
+- ✅ Dataset final (v2): **134 registros**
+- 📊 Gráficos exportados automaticamente
+- 📁 Relatórios exportados em CSV e JSON
+
+---
+
+# 📁 Estrutura do Projeto
+
 DataView/
 │
 ├── data/
@@ -130,7 +136,10 @@ DataView/
 │   │
 │   ├── processed/
 │   │   ├── v1_com_outliers/
+│   │   │   └── vendas_v1.csv
+│   │   │
 │   │   └── v2_outliers_tratado/
+│   │       └── vendas_v2.csv
 │   │
 │   └── final/
 │
@@ -139,117 +148,107 @@ DataView/
 │
 ├── outputs/
 │   ├── graficos/
+│   │   ├── receita_por_mes.png
+│   │   ├── receita_por_trimestre.png
+│   │   ├── top_produtos.png
+│   │   ├── receita_por_categoria.png
+│   │   ├── receita_por_regiao.png
+│   │   ├── distribuicao_receita.png
+│   │   ├── segmentacao_clientes.png
+│   │   └── boxplot_receita_outliers.png
+│   │
 │   ├── metricas_por_mes.csv
 │   ├── segmentacao_clientes.csv
-│   ├── estatisticas_gerais.json
-│   └── comparativo_outliers.csv
+│   └── estatisticas_gerais.json
 │
 ├── requirements.txt
+├── LICENSE
 └── README.md
-```
 
 ---
 
-# Visualizações Geradas
-
-O projeto gera automaticamente gráficos como:
-
-- Receita por mês
-- Receita por trimestre
-- Receita por categoria
-- Receita por região
-- Top produtos
-- Distribuição da receita
-- Boxplot antes e depois do tratamento de outliers
-- Segmentação de clientes
-
-Todos os gráficos são exportados em formato PNG para a pasta `outputs/graficos`.
+# 📊 Resultados e Visualizações
 
 ---
 
-# Arquivos Exportados
+## 📈 Receita ao longo do tempo
 
-Ao final da execução são gerados automaticamente:
+A análise mostra variação significativa nas vendas ao longo do período, com picos bem definidos em determinados meses.
 
-- `metricas_por_mes.csv`
-- `segmentacao_clientes.csv`
-- `estatisticas_gerais.json`
-- gráficos em PNG
-
----
-
-# Como Executar
-
-## 1. Clone o repositório
-
-```bash
-git clone https://github.com/ananda-pires/mini-projeto-sctect-dataview-acsp.git
-```
-
-## 2. Entre na pasta
-
-```bash
-cd DataView
-```
-
-## 3. Instale as dependências
-
-```bash
-pip install pandas numpy matplotlib seaborn
-```
-
-## 4. Execute o notebook
-
-Abra o arquivo:
-
-```
-notebooks/01_analise_exploratoria_vendas.ipynb
-```
-
-e execute todas as células em ordem.
+<p align="center">
+  <img src="outputs/graficos/receita_por_mes.png" width="750"/>
+</p>
 
 ---
 
-# Principais Insights Obtidos
+## 🏆 Produtos mais relevantes
 
-- Forte variação da receita ao longo do período analisado.
-- Produtos da categoria **Celulares** apresentam maior faturamento.
-- A região com maior receita total foi a **Norte**.
-- Pequena parcela dos clientes concentra grande parte da receita (Princípio de Pareto).
-- O tratamento de outliers reduziu a dispersão dos dados sem alterar significativamente os indicadores de negócio.
+Produtos como Tablets e Smartphones concentram grande parte da receita total.
 
----
-
-# Melhorias Futuras
-
-- Dashboard interativo com Streamlit
-- Modelos preditivos de vendas
-- Clusterização de clientes
-- Previsão de demanda
-- Deploy da aplicação
-- Integração com banco de dados
+<p align="center">
+  <img src="outputs/graficos/top_produtos.png" width="750"/>
+</p>
 
 ---
 
-# Desenvolvido com
+## 🧩 Categorias de maior impacto
 
-- Python
-- VS Code
-- Git
-- GitHub
-- Pandas
-- NumPy
-- Matplotlib
-- Seaborn
+A categoria Celulares domina o faturamento total do período analisado.
+
+<p align="center">
+  <img src="outputs/graficos/receita_por_categoria.png" width="750"/>
+</p>
 
 ---
 
-# Vídeo de Demonstração
+## 🌎 Desempenho regional
 
-> Inserir o link do vídeo (YouTube ou Google Drive).
+A região Norte apresenta o maior volume de receita, enquanto outras regiões mostram distribuição mais equilibrada.
+
+<p align="center">
+  <img src="outputs/graficos/receita_por_regiao.png" width="750"/>
+</p>
 
 ---
 
-# Licença
+## 📦 Outliers e distribuição
 
-Projeto desenvolvido para fins educacionais no curso de Análise de Dados.
+O tratamento de outliers reduz a dispersão dos dados sem alterar as principais tendências de negócio.
+
+<p align="center">
+  <img src="outputs/graficos/boxplot_receita_outliers.png" width="750"/>
+</p>
+
+---
+
+# 📊 Principais Insights
+
+- Forte variação de receita ao longo do tempo  
+- Categoria Celulares lidera faturamento  
+- Região Norte apresenta melhor desempenho  
+- Forte concentração de receita em poucos clientes  
+- Outliers influenciam significativamente a dispersão dos dados  
+
+---
+
+# 🔮 Melhorias Futuras
+
+- Dashboard interativo com Streamlit  
+- Modelos preditivos de vendas  
+- Clusterização de clientes  
+- Previsão de demanda  
+- Deploy da aplicação  
+
+---
+
+# 📄 Licença
+
+Este projeto está licenciado sob a Licença MIT.
+
+---
+
+# 👩‍💻 Autora
+
+**Ananda Pires**
+
+GitHub: https://github.com/ananda-pires
