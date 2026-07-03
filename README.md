@@ -233,11 +233,12 @@ O tratamento de outliers reduz a dispersão dos dados sem alterar as principais 
 
 # 🔮 Melhorias Futuras
 
-- Dashboard interativo com Streamlit  
-- Modelos preditivos de vendas  
-- Clusterização de clientes  
-- Previsão de demanda  
-- Deploy da aplicação  
+# 🔮 Melhorias Futuras
+
+- Desenvolvimento de um dashboard interativo com Streamlit para exploração dinâmica dos dados.
+- Implementação de modelos preditivos para estimativa de receita e vendas futuras.
+- Segmentação automática de clientes utilizando técnicas de aprendizado não supervisionado (K-Means).
+- Deploy da aplicação em ambiente de nuvem, permitindo acesso via navegador. 
 
 ---
 
