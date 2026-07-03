@@ -233,8 +233,6 @@ O tratamento de outliers reduz a dispersão dos dados sem alterar as principais 
 
 # 🔮 Melhorias Futuras
 
-# 🔮 Melhorias Futuras
-
 - Desenvolvimento de um dashboard interativo com Streamlit para exploração dinâmica dos dados.
 - Implementação de modelos preditivos para estimativa de receita e vendas futuras.
 - Segmentação automática de clientes utilizando técnicas de aprendizado não supervisionado (K-Means).
@@ -253,3 +251,7 @@ Este projeto está licenciado sob a Licença MIT.
 **Ananda Pires**
 
 GitHub: https://github.com/ananda-pires
+
+## Vídeo de demonstração
+
+https://drive.google.com/drive/folders/1d6qMHXdYZ_NUrdUtYu6d6fEujL-fFhz9?usp=sharing
